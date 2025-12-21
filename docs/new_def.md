@@ -15,7 +15,7 @@ Cuando creamos un modelo estamos eligiendo que forma tendra esa f
 
 Existen familias de modelos que se utilizan segun el problema:
 
- * Modelos lineales (Regresion logistica y Regresion Lineal): Este tipo de modelos imaginan que el mundo es una linea recta. Su formula es simple, * y = m * x + b *
+ * Modelos lineales (Regresion logistica y Regresion Lineal): Este tipo de modelos imaginan que el mundo es una linea recta. Su formula es simple, **y = m * x + b**
  Este tipo de modelos se utiliza cuando la relacion es simple y proporcional (por ej: "mientras mas cara sea la casa")
 
  * Modelos de arboles (Decision Trees y Random Forest): Estos modelos realizan preguntas en cadena (por ej: "¿El precio es mayor a 1000? Sí. -> ¿La volatilidad es alta? No. -> Entonces Sube". )
