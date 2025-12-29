@@ -29,6 +29,3 @@ def load_blue_data(source_csv: str | Path, *, output_csv: str | Path | None = No
     df.to_csv(output_path, index=False)
     return df
 
-
-__all__ = ["load_blue_data"]
-

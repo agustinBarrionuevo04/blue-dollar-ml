@@ -37,6 +37,3 @@ def format_category_dates(
     df.to_csv(output_path, index=False)
     return output_path
 
-
-__all__ = ["format_category_dates"]
-

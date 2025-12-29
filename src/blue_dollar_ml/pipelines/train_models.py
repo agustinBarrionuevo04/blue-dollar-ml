@@ -2,8 +2,6 @@
 High-level script to train the available models in one go.
 """
 
-from __future__ import annotations
-
 from blue_dollar_ml.models.logistic_regression import train_logistic_regression
 from blue_dollar_ml.models.random_forest import train_random_forest
 
@@ -25,6 +23,4 @@ def main() -> None:
         print(f"{model_name.replace('_', ' ').title()}: {payload['accuracy']:.2%}")
 
 
-if __name__ == "__main__":
-    main()
-
+main()

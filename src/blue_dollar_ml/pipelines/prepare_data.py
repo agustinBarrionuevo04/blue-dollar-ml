@@ -2,8 +2,6 @@
 Wrapper script that combines the available data processing utilities.
 """
 
-from __future__ import annotations
-
 from blue_dollar_ml.config import PROCESSED_DATA_DIR, RAW_DATA_DIR
 from blue_dollar_ml.data_processing import concat_csv_files, format_category_dates, load_blue_data
 
@@ -30,6 +28,4 @@ def main() -> None:
     print("Pipeline de datos ejecutado correctamente.")
 
 
-if __name__ == "__main__":
-    main()
-
+main()

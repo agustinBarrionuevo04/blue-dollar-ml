@@ -2,8 +2,6 @@
 Training helpers for the logistic regression baseline.
 """
 
-from __future__ import annotations
-
 from typing import Any, Dict
 
 from sklearn.linear_model import LogisticRegression
@@ -52,8 +50,3 @@ def main() -> None:
         print("¡OBJETIVO CUMPLIDO! Tu modelo aprendió patrones reales.")
     else:
         print("Seguimos empatados o perdiendo. Necesitamos modelos más complejos.")
-
-
-if __name__ == "__main__":
-    main()
-

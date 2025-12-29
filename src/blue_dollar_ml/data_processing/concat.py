@@ -25,6 +25,3 @@ def concat_csv_files(
     combined.to_csv(output_path, index=False)
     return output_path
 
-
-__all__ = ["concat_csv_files"]
-

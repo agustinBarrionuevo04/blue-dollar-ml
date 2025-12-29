@@ -2,8 +2,6 @@
 Reusable helpers to load tabular datasets used by the models.
 """
 
-from __future__ import annotations
-
 from pathlib import Path
 from typing import Tuple
 
@@ -66,7 +64,3 @@ def temporal_split(
     y_test = target.iloc[val_idx:]
 
     return (x_train, y_train), (x_val, y_val), (x_test, y_test)
-
-
-__all__ = ["load_feature_dataset", "temporal_split"]
-

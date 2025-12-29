@@ -2,8 +2,6 @@
 Shared preprocessing utilities for model features.
 """
 
-from __future__ import annotations
-
 from typing import Tuple
 
 from sklearn.preprocessing import StandardScaler
@@ -19,7 +17,4 @@ def scale_features(x_train, x_val, x_test) -> Tuple[StandardScaler, tuple]:
     x_val_scaled = scaler.transform(x_val)
     x_test_scaled = scaler.transform(x_test)
     return scaler, (x_train_scaled, x_val_scaled, x_test_scaled)
-
-
-__all__ = ["scale_features"]
 

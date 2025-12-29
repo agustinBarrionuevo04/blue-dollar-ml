@@ -2,8 +2,6 @@
 Random forest experiment built on top of the shared dataset helpers.
 """
 
-from __future__ import annotations
-
 from typing import Any, Dict
 
 from sklearn.ensemble import RandomForestClassifier
@@ -53,8 +51,3 @@ def main() -> None:
         print("¡OBJETIVO CUMPLIDO! Tu modelo aprendió patrones reales.")
     else:
         print("Seguimos empatados o perdiendo. Necesitamos modelos más complejos.")
-
-
-if __name__ == "__main__":
-    main()
-

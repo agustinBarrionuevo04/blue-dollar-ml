@@ -2,8 +2,6 @@
 Very simple baseline strategies used for sanity-check comparisons.
 """
 
-from __future__ import annotations
-
 import numpy as np
 import pandas as pd
 
@@ -50,7 +48,3 @@ def relative_strength_index(values: pd.Series, periods: int = 14) -> pd.Series:
     rs = avg_gain / avg_loss
     rsi = 100 - (100 / (1 + rs))
     return rsi
-
-
-__all__ = ["AlwaysUp", "SameAsYesterday", "relative_strength_index"]
-
