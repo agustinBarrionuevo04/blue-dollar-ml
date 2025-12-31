@@ -3,7 +3,9 @@ Wrapper script that combines the available data processing utilities.
 """
 
 from blue_dollar_ml.config import PROCESSED_DATA_DIR, RAW_DATA_DIR
-from blue_dollar_ml.data_processing import concat_csv_files, format_category_dates, load_blue_data
+from blue_dollar_ml.data_processing.cleaning import format_category_dates
+from blue_dollar_ml.data_processing.concat import concat_csv_files
+from blue_dollar_ml.data_processing.loader import load_blue_data
 
 
 def run_data_pipeline() -> None:

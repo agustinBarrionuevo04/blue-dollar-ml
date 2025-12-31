@@ -50,3 +50,6 @@ def main() -> None:
         print("¡OBJETIVO CUMPLIDO! Tu modelo aprendió patrones reales.")
     else:
         print("Seguimos empatados o perdiendo. Necesitamos modelos más complejos.")
+
+
+
