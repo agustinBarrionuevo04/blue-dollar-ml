@@ -6,9 +6,7 @@ reused from notebooks, tests or pipelines without rewriting logic.
 """
 
 from pathlib import Path
-
 import pandas as pd
-
 from blue_dollar_ml.config import PROCESSED_DATA_DIR
 
 
@@ -36,4 +34,5 @@ def format_category_dates(
     output_path.parent.mkdir(parents=True, exist_ok=True)
     df.to_csv(output_path, index=False)
     return output_path
+
 
