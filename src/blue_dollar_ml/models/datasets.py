@@ -37,13 +37,8 @@ def load_feature_dataset(
     return df, features
 
 
-def temporal_split(
-    features: pd.DataFrame,
-    target: pd.Series,
-    *,
-    train_ratio: float = 0.70,
-    val_ratio: float = 0.15,
-):
+def temporal_split(features: pd.DataFrame, target: pd.Series,*,
+    train_ratio: float = 0.70, val_ratio: float = 0.15 ):
     """
     Deterministically split a time-ordered dataset keeping the chronological
     order intact. The remainder goes into the test set.

@@ -35,4 +35,24 @@ def format_category_dates(
     df.to_csv(output_path, index=False)
     return output_path
 
+def delete_data_trash(
+    source_csv: str | Path,
+    output_csv: str | Path | None = None,
+    ):
+    "Read csv and Get data only 2017-2025"
+    source_path = Path(source_csv)
+    if output_csv is None:
+        output_path = PROCESSED_DATA_DIR / f"{source_path.stem}_data.csv"
+    else:
+        output_path = Path(output_csv)
+    df = pd.read_csv(source_path)
+    START_DATE = "2017-01-01"
+    df = df.loc[START_DATE:]
+    df.to_csv(output_path, index=False)
+    return output_path    
+
+
+    
+    
+
 

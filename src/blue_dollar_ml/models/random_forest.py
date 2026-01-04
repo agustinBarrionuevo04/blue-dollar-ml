@@ -44,7 +44,6 @@ def train_random_forest(features_csv: str | None = None) -> Dict[str, Any]:
 
 def main() -> None:
     result = train_random_forest()
-    print("\nResultados del Gran Desafío:")
     print(f"Modelo con Features Avanzados: {result['accuracy']:.2%}")
     print("Baseline a vencer (Como Ayer): 58.68%")
     if result["accuracy"] > 0.5868:
