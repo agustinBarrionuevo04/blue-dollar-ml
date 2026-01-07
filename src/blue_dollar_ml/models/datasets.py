@@ -24,16 +24,29 @@ def load_feature_dataset(
 
     # The RSI is calculated with current-day data, therefore we shift it to
     # avoid leaking the answer into the model.
-    rsi_columns = [column for column in df.columns if "rsi" in column.lower()]
-    if rsi_columns:
-        df[rsi_columns] = df[rsi_columns].shift(1)
+    df['retorno_blue'] = df['valor'].pct_change()
+    df['retorno_oficial'] = df['dolar_oficial'].pct_change()
+
+    cols_a_desplazar = ['rsi', 'brecha', 'retorno_blue', 'retorno_oficial'] 
+    cols_existentes = [c for c in cols_a_desplazar if c in df.columns]
+    df[cols_existentes] = df[cols_existentes].shift(1)
 
     df.dropna(inplace=True)
     df["returns"] = df["valor"].pct_change()
     df["target_up"] = (df["returns"] > 0).astype(int)
     df.dropna(inplace=True)
 
-    features = [column for column in df.columns if column not in {"returns", "target_up", "valor"}]
+    features = []
+    columnas_prohibidas = [
+        'returns', 'target_up', 'target_return', 'valor', 
+        'dolar_blue', 'dolar_oficial', 
+        'fecha'
+    ]
+
+    for col in df.columns:
+        if col not in columnas_prohibidas:
+            features.append(col)
+
     return df, features
 
 
